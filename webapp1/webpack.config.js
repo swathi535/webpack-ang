@@ -19,7 +19,7 @@ module.exports = {
       },
       remoteType: "var",
       remotes: {
-        mfe: "mfe",
+        mfe: "mfe",//or remove remotype and add mfe:http://localhost:4300/mfe.js" which we declare in index.html
       },
     }),
   ],
