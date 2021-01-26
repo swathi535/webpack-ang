@@ -7,10 +7,22 @@ import { HomeComponent } from './home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { PostsComponent } from './posts/posts.component';
+import { UsersComponent } from './users/users.component';
+
+import { HttpClientModule } from "@angular/common/http";
+import { PostsService } from './services/posts.service';
+import { UsersService } from './services/users.service';
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent],
-  imports: [BrowserModule, AppRoutingModule,FormsModule],
-  providers: [],
+  declarations: 
+   [AppComponent, 
+   HomeComponent, 
+   LoginComponent,
+   RegisterComponent, 
+   PostsComponent, 
+   UsersComponent],
+  imports: [BrowserModule, AppRoutingModule,FormsModule,HttpClientModule],
+  providers: [PostsService,UsersService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
